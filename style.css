@@ -1,7 +1,7 @@
-#content * {
+/* #content * {
     border: 1px solid red;
     box-sizing: border-box;
-}
+} */
 
 body {
     font-family: Roboto, sans-serif;
@@ -66,6 +66,7 @@ body {
     display: grid;
     grid-template: 1fr 1fr / 3fr 2fr;
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 #header > div {
@@ -146,10 +147,123 @@ body {
 #content {
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
+    background-color: #E5E7EB;
+    font-weight: bold;
+    padding: 30px;
+    column-gap: 20px;
+}
+
+#content .icon {
+    height: 1.5rem;
+    margin-left: 20px;   
+}
+
+#main-content > div > div:last-child {
+    align-self: end;
+}
+
+#cards {
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 #main-content {
-    grid-row: 1 / 3;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 15px;
+}
+
+#main-content > div {
+    background-color: white;
+    border-radius: 15px;
+    border-left: 15px solid orange;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* position: relative; */
+}
+
+/* #main-content > div:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 10px solid orange;
+    height: 100%;
+    z-index: -1;
+    width: 1px;
+} */
+
+
+h3 {
+    margin: 0 0 16px 0;
+}
+
+#content p {
+    margin: 0;
+}
+
+#content p.title {
+    font-size: 1.2rem;
+}
+
+#announcements {
+    margin-bottom: 30px;
+}
+
+#announce-body {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+#announcements .line {
+    height: 2px;
+    background-color: #E5E7EB;
+    /* border: 2px #E5E7EB; */
+}
+
+#announce-body * {
+    margin: 0 0 10px 0;
+}
+
+#content p.desc {
+    font-weight: normal;
+}
+
+
+#trending {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+#trend-body {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+
+    display: grid;
+    align-content: space-between;
+}
+
+#trending .pfp {
+    width: 50px;
+    height: 50px;
+}
+
+#trending p {
+    margin: 0;
+}
+
+#trend-body > div {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    align-content: center;
+}
+
+#trending p.desc {
+    font-weight: normal;
 }
